@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #182538;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .8s ease-out both; }
+.fade-up-200 { animation-delay: .2s; }
+.fade-up-400 { animation-delay: .4s; }
+.fade-up-600 { animation-delay: .6s; }
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.floaty { animation: floaty 6s ease-in-out infinite; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+@media (max-width: 469px){
+  #triangle-topleft {
+    border-top: 100px solid white;
+    border-right: 80px solid transparent;
+  }
+
+#triangle-topright {
+    border-top: 100px solid white;
+    border-left: 80px solid transparent;
+  }
+}
+
+@media (min-width: 470px){
+  #triangle-topleft {
+    border-top: 100px solid white;
+    border-right: 130px solid transparent;
+  }
+
+#triangle-topright {
+    border-top: 100px solid white;
+    border-left: 130px solid transparent;
+  }
+}
+
+@media (min-width: 700px){
+#triangle-topright {
+    border-top: 100px solid white;
+    border-left: 180px solid transparent;
+  }
+}
+
