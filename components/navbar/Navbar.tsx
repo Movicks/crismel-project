@@ -151,7 +151,7 @@ export default function Navbar() {
         >
           <div className="flex justify-between items-center mb-6">
             <span className="text-white font-bold text-lg">Menu</span>
-            <button onClick={() => setMobileOpen(false)} className='w-10 h-10 flex items-center justify-center border-2 border-[#36e43e] text-black '>
+            <button onClick={() => setMobileOpen(false)} className='w-8 h-8 flex items-center justify-center border-2 border-[#36e43e] text-black '>
               <X className="text-white" />
             </button>
           </div>
@@ -177,7 +177,7 @@ export default function Navbar() {
             <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="block mt-4 text-center bg-[#36e43e] text-black px-4 py-3 font-semibold"
+            className="block mb-4 text-center bg-[#36e43e] text-black px-4 py-3 font-semibold"
             >
             Get Demo
             </a>
