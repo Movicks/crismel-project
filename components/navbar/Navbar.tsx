@@ -177,7 +177,7 @@ export default function Navbar() {
             <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="block mb-4 text-center bg-[#36e43e] text-black px-4 py-3 font-semibold"
+            className="block mb-8 text-center bg-[#36e43e] text-black px-4 py-3 font-semibold"
             >
             Get Demo
             </a>
